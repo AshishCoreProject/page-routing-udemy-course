@@ -15,8 +15,14 @@ export default function HomePage() {
           </Link>
         </li>
         <li>
-          <Link className="text-orange-500 " href="/client">
+          <Link className="text-orange-500 " href="/clients">
             Clients
+          </Link>
+        </li>
+
+        <li>
+          <Link className="text-orange-500" href="/clients/ashish">
+            Client Id
           </Link>
         </li>
       </ul>
