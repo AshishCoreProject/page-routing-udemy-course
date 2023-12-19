@@ -1,12 +1,25 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function HomePage() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>The Home Page</h1>
+      <ul>
+        <li>
+          <Link className="text-orange-500 " href="/portfolio">
+            PortFolio
+          </Link>
+        </li>
+        <li>
+          <Link className="text-orange-500 " href="/client">
+            Clients
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }
