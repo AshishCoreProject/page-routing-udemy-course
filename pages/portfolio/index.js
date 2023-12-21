@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
-
+import Head from "next/head";
+import image from "../../public/personImg.jpeg";
+import Image from "next/image";
 //Navigating Programmatically
-function PorfolioPage() {
+function PortfolioPage() {
   const router = useRouter();
 
   function loadProjectHandlerProject() {
@@ -14,16 +16,28 @@ function PorfolioPage() {
   }
 
   return (
-    <div>
-      <h2> This is Portfolio Page</h2>
-      <button
-        className=" bg-stone-500 hover:bg-stone-400"
-        onClick={loadProjectHandlerProject}
-      >
-        Load the Portfolio
-      </button>
-    </div>
+    <>
+      <div>
+        <Head>
+          <title>Portfolio page</title>
+          <meta name="description" content={`${router}`} />
+        </Head>
+      </div>
+
+      <div>
+        <h2> This is Portfolio Page</h2>
+        <button
+          className=" bg-stone-500 hover:bg-stone-400"
+          onClick={loadProjectHandlerProject}
+        >
+          Load the Portfolio
+        </button>
+      </div>
+      <div>
+        <Image src={image} alt="personImage" width={340} height={160} />
+      </div>
+    </>
   );
 }
 
-export default PorfolioPage;
+export default PortfolioPage;
